@@ -15,6 +15,5 @@ env/
 reports/
 templates/
 tests/
-tools/
 .gemini/
 repo/

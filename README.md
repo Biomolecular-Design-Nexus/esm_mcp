@@ -40,7 +40,7 @@ pip install --ignore-installed fastmcp
 ### 1. Extracting ESM embeddings from CSV
 
 ```shell
-python notebooks/esm_embedding.py -i examples/data.csv -m esm2_t33_650M_UR50D
+python scripts/esm_embedding.py -i examples/data.csv -m esm2_t33_650M_UR50D
 ```
 
 **Supported ESM Models:**
@@ -55,7 +55,7 @@ After extracting embeddings, use them for fitness prediction:
 
 ```shell
 # Train with ESM embeddings (5-fold cross validation)
-python notebooks/esm_train_fitness.py -i examples/ -o examples/esm_fitness -b esm2_t33_650M_UR50D -m svr
+python scripts/esm_train_fitness.py -i examples/ -o examples/esm_fitness -b esm2_t33_650M_UR50D -m svr
 ```
 
 **Supported Head Models:**
@@ -73,20 +73,20 @@ python notebooks/esm_train_fitness.py -i examples/ -o examples/esm_fitness -b es
 ### 3. Predict with a fitness model using extracted embeddings
 
 ```shell
-python notebooks/esm_predict_fitness.py  -i  examples/data.csv  -m examples/esm2_650M_RF/final_model -b esm2_t33_650M_UR50D
+python scripts/esm_predict_fitness.py  -i  examples/data.csv  -m examples/esm2_650M_RF/final_model -b esm2_t33_650M_UR50D
 ```
 
 ### 4. ESM likelihood calculation for variants
 In cases where not enough variant data is available, a good solutions is to use likelihoods to evaluate the fitness of variants.
 
 ```shell
-python notebooks/esm_llh.py -i examples/data.csv -w examples/wt.fasta -m esm2_t33_650M_UR50D
+python scripts/esm_llh.py -i examples/data.csv -w examples/wt.fasta -m esm2_t33_650M_UR50D
 ```
 ### 5. ESM-IF likelihood calculation with structure
 In cases where not enough variant data is available but a good structure of wild-type is available, another good solutions is to use ESM-IF likelihoods to evaluate the fitness of variants.
 
 ```shell
-python notebooks/esm_if_llh.py -i examples/data.csv -w examples/wt.fasta -p examples/wt_struct.pdb
+python scripts/esm_if_llh.py -i examples/data.csv -w examples/wt.fasta -p examples/wt_struct.pdb
 ```
 
 ## MCP usage
