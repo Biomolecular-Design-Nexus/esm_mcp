@@ -93,8 +93,8 @@ python scripts/esm_if_llh.py -i examples/data.csv -w examples/wt.fasta -p exampl
 
 ### Install ESM MCP server
 ```shell
-fastmcp install claude-code mcp-servers/esm_mcp/src/esm_mcp.py --python mcp-servers/esm_mcp/env/bin/python
-fastmcp install gemini-cli mcp-servers/esm_mcp/src/esm_mcp.py --python mcp-servers/esm_mcp/env/bin/python
+fastmcp install claude-code tool-mcps/esm_mcp/src/esm_mcp.py --python tool-mcps/esm_mcp/env/bin/python
+fastmcp install gemini-cli tool-mcps/esm_mcp/src/esm_mcp.py --python tool-mcps/esm_mcp/env/bin/python
 
 ```
 
