@@ -17,6 +17,21 @@ Note: ESM-Fold MCP is created in another mcp server called `esmfold_mcp` as it h
 
 ## Installation
 
+### Quick Setup (Recommended)
+
+Run the automated setup script:
+
+```bash
+cd esm_mcp
+bash quick_setup.sh
+```
+
+The script will create the conda environment, install all dependencies, clone the ESM repository, and display the Claude Code configuration. See `quick_setup.sh --help` for options like `--skip-env` or `--skip-repo`.
+
+### Manual Installation (Alternative)
+
+If you prefer manual installation or need to customize the setup:
+
 ```bash
 # Create and activate virtual environment
 mamba env create -p ./env python=3.10 pip -y
